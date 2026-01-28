@@ -45,7 +45,6 @@
             pkg-config
 
             rust-analyzer
-            jetbrains.rust-rover
           ];
 
           shellHook = ''
