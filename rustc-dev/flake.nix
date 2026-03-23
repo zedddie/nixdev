@@ -8,7 +8,7 @@
     {
       self,
       nixpkgs,
-    # rust-overlay,
+      # rust-overlay,
     }:
     let
       system = "x86_64-linux";
@@ -33,7 +33,8 @@
           openssl
         ];
         shellHook = ''
-          export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath runtimeLibs}:$LD_LIBRARY_PATH"
+          export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath runtimeLibs}:$LD_LIBRARY_PATH";
+          exec fish
         '';
       };
     };
